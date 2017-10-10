@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER didstopia
+MAINTAINER Harry Lee <harryl@vatit.com>
 
 # Setup the locales
 RUN locale-gen en_US.UTF-8  
