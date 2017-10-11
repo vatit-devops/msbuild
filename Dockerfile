@@ -25,14 +25,14 @@ RUN apt-get install -y \
     software-properties-common \
     python-software-properties \
     mono-complete \
-    mono-xsp4 \
     wget \
     nuget \
     python-pip \
     git-core
+    # mono-xsp4 \ # Required if we want to serve up Dragon through docker
 
 # Create a symbolic link for msbuild.exe and msbuild
-# RUN ln -s /usr/bin/xbuild /usr/bin/msbuild.exe
+RUN ln -s /usr/bin/xbuild /usr/bin/msbuild.exe
 
 # Cleanup
 ENV DEBIAN_FRONTEND newt
